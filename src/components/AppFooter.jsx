@@ -2,6 +2,9 @@ export default function AppFooter(){
 
 
     return(
-        <footer>il mio footer</footer>
+        <footer>
+            <p>&copy; {new Date().getFullYear()} - All right reserved</p>
+            
+            </footer>
     )
 }

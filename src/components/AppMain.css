@@ -1,0 +1,28 @@
+.boxProject{
+    
+    margin: 0 auto;
+   
+    ul{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin: 1rem;
+            text-align: center;
+            p{
+                margin: .5rem 0;
+                text-align: left;
+                padding: 0 .3rem;
+            }
+        }
+    }
+}
+
+.completato{
+    background-color: green;
+    color: white;
+    padding: 1rem 2rem;
+}
