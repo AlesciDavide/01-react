@@ -38,6 +38,8 @@ export default function AppMain(){
         completato: false
       }]
       
+    const completato = project.filter((projectCompletato) => projectCompletato.completato)
+    const daCompletare = project.filter((projectCompletato) => !projectCompletato.completato)
     return(
         <main> 
             <h1 style={{textAlign: "center"}}>
@@ -45,8 +47,36 @@ export default function AppMain(){
             </h1>
 
             <section className='boxProject'>
+              <h1 style={{textAlign: "center", margin:"1rem"}}>Completati</h1>
                 <ul>
-                {project.map((project) =>
+                {completato.map((project) =>
+                     <li key={project.id}>
+                        <h3>{project.nome}</h3>
+                        <p>
+                        id:{project.id}
+                        </p>
+                        <p>difficoltà: {project.difficoltà}</p>
+                        <p>descrizione: {project.descrizione}</p>
+                        <p>
+                            completato?  {project.completato ? (
+                                            <span>✅</span>
+                                        ) : (
+                                            <span>❌</span>
+                                        )}
+                        </p>
+                        </li> 
+                     )}
+                </ul>
+                <div>
+                  
+                    
+                </div>
+            </section>
+
+            <section className='boxProject'>
+              <h1 style={{textAlign: "center", margin:"1rem"}}>Da completare</h1>
+              <ul>
+                {daCompletare.map((project) =>
                      <li key={project.id}>
                         <h3>{project.nome}</h3>
                         <p>
